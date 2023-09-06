@@ -1,0 +1,6 @@
+#!/bin/bash
+src_dir=$(pwd)
+dest_dir=$(dirname "$src_dir")
+sync -av --ignore-existing --update --include '*/' --include '*.html' --exclude '*' "$src_dir/" "$dest_dir/"
+echo "HTML files copied from $src_dir to $dest_dir"
+
